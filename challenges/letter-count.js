@@ -12,7 +12,26 @@
     "e": 1
   }
   ```
+  psudocode:
+  function LetterCount(phrase) }
+  var objResult {}
+  loop through letters of phrase
+  if letter not key in obj, add key/value of letter: 1
+  if letter already key in obj, take value, add 1
+  after all loops, return obj */
 
+function LetterCount(phrase) {
+  var objResult = {};
+  for (i = 0; i < phrase.length; i ++ ) {
+    if ( !( objResult[phrase[i]]) ) {
+      // console.log( i + ": " + phrase[i] + "isn't in object");
+      objResult[phrase[i]] = 1;
+      console.log(objResult);
+    } //  if loop
+  }   // for loop
+}    //   function
+LetterCount("apple");
+/*
   Bonuses
   - Make sure that lower case letters and upper case letters count for the same character.
   - Ignore spaces, special characters, and punctuation.
