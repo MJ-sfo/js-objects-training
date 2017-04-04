@@ -58,22 +58,15 @@
 // when input is empty, return object
 
 function parseQueryString (phrase) {
-  // var key = "";
-  // var value = "";
-  // var letter = "";
-  // var keyOrValue = "key";
   var pairObject = {};
   var arrPairs = phrase.split('&'); // splits one text into array of key/value pairs
   var arrKeyValue = [];
-  // console.log(arrPairs);
   for (i = 0; i < arrPairs.length; i ++ ) {
     var arrKeyValue = arrPairs[i].split("="); // split key/value into two words
-    // console.log(arrKeyValue);
-    // console.log(arrPairs);
     pairObject[arrKeyValue[0]] = arrKeyValue[1];
-    console.log(pairObject);
   }   // for loop
-
+  console.log(pairObject);
+  return pairObject;
 }   // function
 
 var testString = "fruit=apple&tool=hammer&food=lemons";
