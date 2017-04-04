@@ -45,3 +45,36 @@
 */
 
 // YOUR CODE HERE
+// psudocode
+// function parseQueryString
+// Input: pairs are connected by '=', diff pairs connected by '&'
+// output: one object of pairs
+// define two variables key and value, define object
+// all left of '=' is key, between '=' and '&' is value
+// slice letter, if not = or &, apend to key
+// after = apend to value
+// when '&' push pair into object, next loop apend to key
+
+// when input is empty, return object
+
+function parseQueryString (phrase) {
+  // var key = "";
+  // var value = "";
+  // var letter = "";
+  // var keyOrValue = "key";
+  var pairObject = {};
+  var arrPairs = phrase.split('&'); // splits one text into array of key/value pairs
+  var arrKeyValue = [];
+  // console.log(arrPairs);
+  for (i = 0; i < arrPairs.length; i ++ ) {
+    var arrKeyValue = arrPairs[i].split("="); // split key/value into two words
+    // console.log(arrKeyValue);
+    // console.log(arrPairs);
+    pairObject[arrKeyValue[0]] = arrKeyValue[1];
+    console.log(pairObject);
+  }   // for loop
+
+}   // function
+
+var testString = "fruit=apple&tool=hammer&food=lemons";
+parseQueryString(testString);

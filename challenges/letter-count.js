@@ -1,5 +1,8 @@
 /*
 
+CORRECT ADDRESS for training this afternoon
+https://github.com/sf-wdi-37/js-objects-training
+
   Create a function `letterCount` that accepts a string, and finds the number of times each letter
   occurs in the string. For example, given the word "apple", letterCount("apple") should count all
   occurrences of the letters "a", "p", "l" and "e" and then return the following output:
@@ -23,14 +26,14 @@
 function LetterCount(phrase) {
   var objResult = {};
   for (i = 0; i < phrase.length; i ++ ) {
-    if ( !( objResult[phrase[i]]) ) {
+    if ( !( objResult[phrase[i] ] ) ) {
       objResult[phrase[i]] = 1;
     } //  if loop
     else {
       objResult[phrase[i]] ++;
     } // else loop
   }   // for loop
-  // console.log(objResult);
+  console.log(objResult);
   return(objResult);
 }    //   function
 LetterCount("apple");
