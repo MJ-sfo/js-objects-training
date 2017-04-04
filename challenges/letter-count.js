@@ -24,11 +24,14 @@ function LetterCount(phrase) {
   var objResult = {};
   for (i = 0; i < phrase.length; i ++ ) {
     if ( !( objResult[phrase[i]]) ) {
-      // console.log( i + ": " + phrase[i] + "isn't in object");
       objResult[phrase[i]] = 1;
-      console.log(objResult);
     } //  if loop
+    else {
+      objResult[phrase[i]] ++;
+    } // else loop
   }   // for loop
+  // console.log(objResult);
+  return(objResult);
 }    //   function
 LetterCount("apple");
 /*
